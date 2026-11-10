@@ -12,7 +12,7 @@ Calculadora de consola en Python que permite realizar operaciones matemáticas b
 | - | Multiplicación | ✅ Completada |
 | - | División | ✅ Completada |
 | 1 | Potencia | ✅ Completada |
-| 2 | Módulo | ⏳ Pendiente |
+| 2 | Módulo | ✅ Completada |
 | 3 | Raíz cuadrada | ⏳ Pendiente |
 | 4 | Porcentaje | ⏳ Pendiente |
 | 5 | Valor absoluto | ⏳ Pendiente |
