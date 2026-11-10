@@ -12,6 +12,7 @@ def mostrar_menu():
     print("5. Potencia")
     print("6. Módulo")
     print("7. Raíz cuadrada")
+    print("8. Porcentaje (primer número % del segundo)")
 
 
 def main():
@@ -44,6 +45,8 @@ def main():
         resultado = operaciones.potencia(a, b)
     elif opcion == "6":
         resultado = operaciones.modulo(a, b)
+    elif opcion == "8":
+        resultado = operaciones.porcentaje(a, b)
     else:
         print("Opción no válida")
         return
