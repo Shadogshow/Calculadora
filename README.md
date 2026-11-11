@@ -18,7 +18,7 @@ Calculadora de consola en Python que permite realizar operaciones matemáticas b
 | 5 | Valor absoluto | ✅ Completada |
 | 6 | Factorial | ✅ Completada |
 | 7 | Promedio | ✅ Completada |
-| 8 | Redondeo | ⏳ Pendiente |
+| 8 | Redondeo | ✅ Completada |
 | 9 | Validación de entradas | ⏳ Pendiente |
 | 10 | División por cero | ⏳ Pendiente |
 | 11 | Mejorar el menú | ⏳ Pendiente |

@@ -16,6 +16,7 @@ def mostrar_menu():
     print("9. Valor absoluto")
     print("10. Factorial")
     print("11. Promedio de varios números")
+    print("12. Redondeo a n decimales")
 
 
 def main():
@@ -44,6 +45,18 @@ def main():
         numeros = [float(x) for x in entrada.split()]
         try:
             resultado = operaciones.promedio(numeros)
+        except ValueError as error:
+            print("Error:", error)
+            return
+        print("Resultado:", resultado)
+        return
+
+    # Redondeo: pide el número y la cantidad de decimales
+    if opcion == "12":
+        n = float(input("Número: "))
+        decimales = float(input("Cantidad de decimales: "))
+        try:
+            resultado = operaciones.redondeo(n, decimales)
         except ValueError as error:
             print("Error:", error)
             return
