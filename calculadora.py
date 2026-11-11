@@ -14,6 +14,7 @@ def mostrar_menu():
     print("7. Raíz cuadrada")
     print("8. Porcentaje (primer número % del segundo)")
     print("9. Valor absoluto")
+    print("10. Factorial")
 
 
 def main():
@@ -21,13 +22,15 @@ def main():
     opcion = input("Elige una opción: ")
 
     # Operaciones que solo necesitan un número
-    if opcion in ("7", "9"):
+    if opcion in ("7", "9", "10"):
         n = float(input("Número: "))
         try:
             if opcion == "7":
                 resultado = operaciones.raiz_cuadrada(n)
-            else:
+            elif opcion == "9":
                 resultado = operaciones.valor_absoluto(n)
+            else:
+                resultado = operaciones.factorial(n)
         except ValueError as error:
             print("Error:", error)
             return

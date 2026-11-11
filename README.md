@@ -16,7 +16,7 @@ Calculadora de consola en Python que permite realizar operaciones matemáticas b
 | 3 | Raíz cuadrada | ✅ Completada |
 | 4 | Porcentaje | ✅ Completada |
 | 5 | Valor absoluto | ✅ Completada |
-| 6 | Factorial | ⏳ Pendiente |
+| 6 | Factorial | ✅ Completada |
 | 7 | Promedio | ⏳ Pendiente |
 | 8 | Redondeo | ⏳ Pendiente |
 | 9 | Validación de entradas | ⏳ Pendiente |
