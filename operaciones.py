@@ -16,14 +16,26 @@ def multiplicacion(a, b):
 
 
 def division(a, b):
+    if b == 0:
+        raise ValueError("No se puede dividir entre cero")
     return a / b
 
 
 def potencia(base, exponente):
-    return base ** exponente
+    if base == 0 and exponente < 0:
+        raise ValueError("Cero no se puede elevar a un exponente negativo")
+    try:
+        resultado = base ** exponente
+    except OverflowError:
+        raise ValueError("El resultado es demasiado grande")
+    if isinstance(resultado, complex):
+        raise ValueError("El resultado no es un número real")
+    return resultado
 
 
 def modulo(a, b):
+    if b == 0:
+        raise ValueError("No se puede calcular el módulo con divisor cero")
     return a % b
 
 

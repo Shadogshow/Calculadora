@@ -97,22 +97,26 @@ def main():
     a = pedir_numero("Primer número: ")
     b = pedir_numero("Segundo número: ")
 
-    if opcion == "1":
-        resultado = operaciones.suma(a, b)
-    elif opcion == "2":
-        resultado = operaciones.resta(a, b)
-    elif opcion == "3":
-        resultado = operaciones.multiplicacion(a, b)
-    elif opcion == "4":
-        resultado = operaciones.division(a, b)
-    elif opcion == "5":
-        resultado = operaciones.potencia(a, b)
-    elif opcion == "6":
-        resultado = operaciones.modulo(a, b)
-    elif opcion == "8":
-        resultado = operaciones.porcentaje(a, b)
-    else:
-        print("Opción no válida")
+    try:
+        if opcion == "1":
+            resultado = operaciones.suma(a, b)
+        elif opcion == "2":
+            resultado = operaciones.resta(a, b)
+        elif opcion == "3":
+            resultado = operaciones.multiplicacion(a, b)
+        elif opcion == "4":
+            resultado = operaciones.division(a, b)
+        elif opcion == "5":
+            resultado = operaciones.potencia(a, b)
+        elif opcion == "6":
+            resultado = operaciones.modulo(a, b)
+        elif opcion == "8":
+            resultado = operaciones.porcentaje(a, b)
+        else:
+            print("Opción no válida")
+            return
+    except ValueError as error:
+        print("Error:", error)
         return
 
     print("Resultado:", resultado)

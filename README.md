@@ -20,7 +20,7 @@ Calculadora de consola en Python que permite realizar operaciones matemáticas b
 | 7 | Promedio | ✅ Completada |
 | 8 | Redondeo | ✅ Completada |
 | 9 | Validación de entradas | ✅ Completada |
-| 10 | División por cero | ⏳ Pendiente |
+| 10 | División por cero | ✅ Completada |
 | 11 | Mejorar el menú | ⏳ Pendiente |
 | 12 | Repetir operaciones | ⏳ Pendiente |
 | 13 | Historial de operaciones | ⏳ Pendiente |
