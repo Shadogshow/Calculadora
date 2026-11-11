@@ -24,7 +24,7 @@ Calculadora de consola en Python que permite realizar operaciones matemáticas b
 | 11 | Mejorar el menú | ✅ Completada |
 | 12 | Repetir operaciones | ✅ Completada |
 | 13 | Historial de operaciones | ✅ Completada |
-| 14 | Limpiar historial | ⏳ Pendiente |
+| 14 | Limpiar historial | ✅ Completada |
 | 15 | Mejorar documentación | ⏳ Pendiente |
 
 ## Tecnologías

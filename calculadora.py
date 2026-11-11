@@ -76,6 +76,7 @@ def mostrar_menu():
     print(" 12. Promedio")
     print("--- Historial ---")
     print(" 13. Ver historial")
+    print(" 14. Limpiar historial")
     print("---------------------------------")
     print("  0. Salir")
     print("=================================")
@@ -88,6 +89,14 @@ def mostrar_historial():
     print("--- Historial de operaciones ---")
     for i, registro in enumerate(historial, start=1):
         print(f"{i}. {registro}")
+
+
+def limpiar_historial():
+    if len(historial) == 0:
+        print("El historial ya está vacío.")
+        return
+    historial.clear()
+    print("Historial borrado.")
 
 
 def ejecutar_operacion(opcion):
@@ -126,6 +135,10 @@ def main():
 
         if opcion == "13":
             mostrar_historial()
+            continue
+
+        if opcion == "14":
+            limpiar_historial()
             continue
 
         if opcion not in DOS_NUMEROS and opcion not in UN_NUMERO and opcion not in ("8", "12"):
