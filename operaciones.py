@@ -45,3 +45,9 @@ def factorial(n):
     if n < 0 or n != int(n):
         raise ValueError("El factorial solo existe para enteros no negativos")
     return math.factorial(int(n))
+
+
+def promedio(numeros):
+    if len(numeros) == 0:
+        raise ValueError("Se necesita al menos un número para el promedio")
+    return sum(numeros) / len(numeros)

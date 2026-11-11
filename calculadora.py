@@ -15,6 +15,7 @@ def mostrar_menu():
     print("8. Porcentaje (primer número % del segundo)")
     print("9. Valor absoluto")
     print("10. Factorial")
+    print("11. Promedio de varios números")
 
 
 def main():
@@ -31,6 +32,18 @@ def main():
                 resultado = operaciones.valor_absoluto(n)
             else:
                 resultado = operaciones.factorial(n)
+        except ValueError as error:
+            print("Error:", error)
+            return
+        print("Resultado:", resultado)
+        return
+
+    # Promedio: recibe varios números en una sola línea
+    if opcion == "11":
+        entrada = input("Números separados por espacios: ")
+        numeros = [float(x) for x in entrada.split()]
+        try:
+            resultado = operaciones.promedio(numeros)
         except ValueError as error:
             print("Error:", error)
             return
