@@ -71,6 +71,8 @@ def mostrar_menu():
     print(" 11. Factorial")
     print("--- Operaciones con varios números ---")
     print(" 12. Promedio")
+    print("---------------------------------")
+    print("  0. Salir")
     print("=================================")
 
 
@@ -99,20 +101,29 @@ def ejecutar_operacion(opcion):
 
 
 def main():
-    mostrar_menu()
-    opcion = input("Elige una opción: ").strip()
+    # El ciclo se repite hasta que el usuario elija salir
+    while True:
+        mostrar_menu()
+        opcion = input("Elige una opción: ").strip()
 
-    if opcion not in DOS_NUMEROS and opcion not in UN_NUMERO and opcion not in ("8", "12"):
-        print("Opción no válida")
-        return
+        if opcion == "0":
+            print("¡Hasta luego!")
+            break
 
-    try:
-        resultado = ejecutar_operacion(opcion)
-    except ValueError as error:
-        print("Error:", error)
-        return
-    print("Resultado:", resultado)
+        if opcion not in DOS_NUMEROS and opcion not in UN_NUMERO and opcion not in ("8", "12"):
+            print("Opción no válida")
+            continue
+
+        try:
+            resultado = ejecutar_operacion(opcion)
+        except ValueError as error:
+            print("Error:", error)
+            continue
+        print("Resultado:", resultado)
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except (KeyboardInterrupt, EOFError):
+        print("\nPrograma terminado.")
