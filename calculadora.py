@@ -15,6 +15,9 @@ DOS_NUMEROS = {
     "7": ("Porcentaje", operaciones.porcentaje),
 }
 
+# Guarda las operaciones realizadas durante la sesión
+historial = []
+
 UN_NUMERO = {
     "9": ("Raíz cuadrada", operaciones.raiz_cuadrada),
     "10": ("Valor absoluto", operaciones.valor_absoluto),
@@ -71,13 +74,24 @@ def mostrar_menu():
     print(" 11. Factorial")
     print("--- Operaciones con varios números ---")
     print(" 12. Promedio")
+    print("--- Historial ---")
+    print(" 13. Ver historial")
     print("---------------------------------")
     print("  0. Salir")
     print("=================================")
 
 
+def mostrar_historial():
+    if len(historial) == 0:
+        print("El historial está vacío.")
+        return
+    print("--- Historial de operaciones ---")
+    for i, registro in enumerate(historial, start=1):
+        print(f"{i}. {registro}")
+
+
 def ejecutar_operacion(opcion):
-    # Pide los datos según la operación y devuelve el resultado
+    # Pide los datos, calcula y devuelve (descripción, resultado)
     if opcion in DOS_NUMEROS:
         nombre, funcion = DOS_NUMEROS[opcion]
         if opcion == "7":
@@ -86,18 +100,18 @@ def ejecutar_operacion(opcion):
         else:
             a = pedir_numero("Primer número: ")
             b = pedir_numero("Segundo número: ")
-        return funcion(a, b)
+        return f"{nombre}({a}, {b})", funcion(a, b)
     if opcion in UN_NUMERO:
         nombre, funcion = UN_NUMERO[opcion]
         n = pedir_numero("Número: ")
-        return funcion(n)
+        return f"{nombre}({n})", funcion(n)
     if opcion == "8":
         n = pedir_numero("Número: ")
         decimales = pedir_numero("Cantidad de decimales: ")
-        return operaciones.redondeo(n, decimales)
+        return f"Redondeo({n}, {decimales})", operaciones.redondeo(n, decimales)
     if opcion == "12":
         numeros = pedir_lista_numeros("Números separados por espacios: ")
-        return operaciones.promedio(numeros)
+        return f"Promedio({numeros})", operaciones.promedio(numeros)
 
 
 def main():
@@ -110,16 +124,21 @@ def main():
             print("¡Hasta luego!")
             break
 
+        if opcion == "13":
+            mostrar_historial()
+            continue
+
         if opcion not in DOS_NUMEROS and opcion not in UN_NUMERO and opcion not in ("8", "12"):
             print("Opción no válida")
             continue
 
         try:
-            resultado = ejecutar_operacion(opcion)
+            descripcion, resultado = ejecutar_operacion(opcion)
         except ValueError as error:
             print("Error:", error)
             continue
         print("Resultado:", resultado)
+        historial.append(f"{descripcion} = {resultado}")
 
 
 if __name__ == "__main__":

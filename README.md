@@ -23,7 +23,7 @@ Calculadora de consola en Python que permite realizar operaciones matemáticas b
 | 10 | División por cero | ✅ Completada |
 | 11 | Mejorar el menú | ✅ Completada |
 | 12 | Repetir operaciones | ✅ Completada |
-| 13 | Historial de operaciones | ⏳ Pendiente |
+| 13 | Historial de operaciones | ✅ Completada |
 | 14 | Limpiar historial | ⏳ Pendiente |
 | 15 | Mejorar documentación | ⏳ Pendiente |
 
